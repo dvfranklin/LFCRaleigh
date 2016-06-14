@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>
+        LFC Raleigh - Official Liverpool Supporters Club
+    </title>
+</head>
+
+
+<body>
+<h2>Welcome to LFC Raleigh</h2>
+
+
+<a href="/">News</a>
+<a href="/about">About Us</a>
+<a href="/membership">Membership</a>
+<a href="/calendar">Upcoming Events</a>
+<a href="/admin-login">Admin Login</a>
+
+{{#badInfo}}
+    <p>Sorry, you have entered an incorrect name or password.</p>
+{{/badInfo}}
+
+<form action="/admin-login" method="post">
+    <label for="username">Enter username:</label>
+    <input type="text" name="username" placeholder="User name"><br>
+
+    <label for="password">Enter password:</label>
+    <input type="password" name="password" placeholder="Password"><br>
+
+    <button type="submit">Log in!</button>
+</form>

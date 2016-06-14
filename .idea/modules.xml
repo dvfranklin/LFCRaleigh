@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LFCRaleigh.iml" filepath="$PROJECT_DIR$/.idea/modules/LFCRaleigh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LFCRaleigh_main.iml" filepath="$PROJECT_DIR$/.idea/modules/LFCRaleigh_main.iml" group="LFCRaleigh" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LFCRaleigh_test.iml" filepath="$PROJECT_DIR$/.idea/modules/LFCRaleigh_test.iml" group="LFCRaleigh" />
+    </modules>
+  </component>
+</project>

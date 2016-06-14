@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - lfcraleigh@localhost" uuid="7aa7ef0d-90b8-4570-98d1-44c98938474f">
+      <secret-storage>master_key</secret-storage>
+      <schema-pattern>lfcraleigh.*</schema-pattern>
+      <default-schemas>lfcraleigh.*</default-schemas>
+    </data-source>
+  </component>
+</project>
