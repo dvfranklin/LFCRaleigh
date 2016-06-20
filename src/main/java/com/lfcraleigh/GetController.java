@@ -51,7 +51,7 @@ public class GetController {
 
     @RequestMapping(path = "/membership", method = RequestMethod.GET)
     public String getMembership(){
-        return "membership";
+        return "redirect:https://lfcraleigh.herokuapp.com/membership";
     }
 
     @RequestMapping(path = "/calendar", method = RequestMethod.GET)
