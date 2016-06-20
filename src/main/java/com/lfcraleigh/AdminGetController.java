@@ -23,6 +23,9 @@ public class AdminGetController {
     @Autowired
     EventService eventService;
 
+    @Autowired
+    MemberService memberService;
+
 
     @RequestMapping(path = "/admin-landing", method = RequestMethod.GET)
     public String getAdminlanding(Model model, HttpSession session){
@@ -43,9 +46,12 @@ public class AdminGetController {
     @RequestMapping(path = "/member-lookup", method = RequestMethod.GET)
     public String getMemberLookup(Model model, HttpSession session){
         Administrator admin = adminService.getCurrentAdmin((String)session.getAttribute("username"));
+        List<Member> members = memberService.getAllMembers();
+
 
         if(admin != null) {
             model.addAttribute("admin", admin);
+            model.addAttribute("members", members);
             return "member-lookup";
         }
 
