@@ -33,7 +33,7 @@ public class PostController {
     public String addMember(Member member, CreditCard creditCard, String mailingList) throws PayPalRESTException {
 
         Map<String, String> sdkConfig = new HashMap<String, String>();
-        sdkConfig.put("mode", "sandbox");
+        sdkConfig.put("mode", "live");
 
         String accessToken = memberService.getAccessToken(sdkConfig);
         Payment createdPayment = memberService.submitPayment(sdkConfig, accessToken, creditCard);
