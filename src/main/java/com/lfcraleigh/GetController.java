@@ -51,7 +51,7 @@ public class GetController {
 
     @RequestMapping(path = "/membership", method = RequestMethod.GET)
     public String getMembership(){
-        return "/membership";
+        return "membership";
     }
 
     @RequestMapping(path = "/calendar", method = RequestMethod.GET)
