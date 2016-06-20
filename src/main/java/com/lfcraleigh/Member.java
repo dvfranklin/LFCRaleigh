@@ -1,6 +1,15 @@
 package com.lfcraleigh;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
+
+    @Id
+    @GeneratedValue
+    int id;
 
     String firstName;
     String lastName;

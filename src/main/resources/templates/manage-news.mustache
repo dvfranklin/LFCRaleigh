@@ -8,21 +8,38 @@
 
 <body>
 <h2>LFC Raleigh Administration</h2>
+<p align="center">
+    <img src="JFT96 header.jpeg" width="80%">
+</p>
 
+<p align="center">
+    <a href="/">Back to the Home Page</a>
+    <a href="/member-lookup">Member Query</a>
+    <a href="/manage-news">Manage News</a>
+    <a href="/manage-events">Manage Events</a>
+    <a href="/tweet">Get Yo Tweet On</a>
+    <a href="/logout">Log Out</a>
+</p>
 
-<a href="/">Back to the Home Page</a>
-<a href="/member-lookup">Member Query</a>
-<a href="/manage-news">Manage News</a>
-<a href="/manage-events">Manage Events</a>
-<a href="/tweet">Get Yo Tweet On</a>
-<a href="/logout">Log Out</a>
-
-<form action="manage-news" method="post">
+<form action="add-news" method="post">
     <input type="text" name="title" placeholder="Title" size="102"><br>
     <textarea name="body" placeholder="News goes here!" cols="100" rows="10"></textarea><br>
+    <input type="datetime-local" name="dateTime" value="{{now}}" hidden>
     <button type="submit">Post it!</button>
 </form>
 
+{{#news}}
+    {{title}} posted at {{dateTime}}<br>
+    {{body}}
+    <form action="edit-news" method="get">
+        <input type="hidden" name="id" value="{{id}}">
+        <button type="submit">Edit</button>
+    </form>
+    <form action="delete-news" method="get">
+        <input type="hidden" name="id" value="{{id}}">
+        <button type="submit">Delete</button>
+    </form><br>
+{{/news}}
 
 </body>
 </html>

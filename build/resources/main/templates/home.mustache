@@ -3,28 +3,49 @@
     <title>
         LFC Raleigh - Official Liverpool Supporters Club
     </title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
 </head>
 
 <body>
 <p align="center">
-<img src="JFT96 header.jpeg" width="80%">
+<img class="img-responsive" src="JFT96 header.jpeg" width="80%">
 </p>
 
-<p align="center">
-<a href="/">News</a>
-<a href="/about">About Us</a>
-<a href="/membership">Membership</a>
-<a href="/calendar">Upcoming Events</a>
-<a href="/admin-login">Admin Login</a>
-</p>
+<div id="lfc-raleigh-menu" class="navbar navbar-default " role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder" align="center">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/">Home</a>
+                </li>
+                <li><a href="/about">About Us</a>
+                </li>
+                <li><a href="/membership">Membership</a>
+                </li>
+                <li><a href="/calendar">Upcoming Events</a>
+                </li>
+                <li><a href="/admin-login">Admin Panel</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 {{#news}}
-    <p><h3><b>{{title}}</b></h3></p>
+    <p><h3><b>{{title}}</b></h3> posted at {{dateTimeString}}</p>
 
     <p>{{body}}</p>
 
 
 {{/news}}
+
+<a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/LFCRaleigh">Tweets by LFCRaleigh</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 </body>

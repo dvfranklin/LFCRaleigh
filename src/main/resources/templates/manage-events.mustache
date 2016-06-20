@@ -8,11 +8,34 @@
 
 <body>
 <h2>LFC Raleigh Administration</h2>
+<p align="center">
+    <img src="JFT96 header.jpeg" width="80%">
+</p>
 
+<p align="center">
+    <a href="/">Back to the Home Page</a>
+    <a href="/member-lookup">Member Query</a>
+    <a href="/manage-news">Manage News</a>
+    <a href="/manage-events">Manage Events</a>
+    <a href="/tweet">Get Yo Tweet On</a>
+    <a href="/logout">Log Out</a>
+</p>
 
-<a href="/">Back to the Home Page</a>
-<a href="/member-lookup">Member Query</a>
-<a href="/manage-news">Manage News</a>
-<a href="/manage-events">Manage Events</a>
-<a href="/tweet">Get Yo Tweet On</a>
-<a href="/logout">Log Out</a>
+<form action="add-event" method="post">
+    <input type="text" name="description" placeholder="Describe Event">
+    <input type="text" name="dateTime" placeholder="Enter Date and Time">
+    <input type="text" name="location" placeholder="Enter Location">
+    <button type="submit">Add Event</button>
+</form>
+
+{{#events}}
+    {{dateTime}} at {{location}} - {{description}}<br>
+    <form action="/edit-event" method="get">
+        <input type="hidden" name="id" value="{{id}}">
+        <button type="submit">Edit</button>
+    </form>
+    <form action="/delete-event" method="get">
+        <input type="hidden" name="id" value="{{id}}">
+        <button type="submit">Delete</button>
+    </form>
+{{/events}}
