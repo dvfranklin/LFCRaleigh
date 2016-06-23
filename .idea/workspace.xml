@@ -6,7 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba6046cd-8927-48c4-8cfb-15b411334fa3" name="Default" comment="" />
+    <list default="true" id="ba6046cd-8927-48c4-8cfb-15b411334fa3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/LFCRaleigh_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/LFCRaleigh_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/LFCRaleigh_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/LFCRaleigh_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+    </list>
     <ignored path="LFCRaleigh.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -120,8 +125,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            <state relative-caret-position="135">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -387,7 +392,7 @@
         <entry key="$PROJECT_DIR$/../CalendarSpring" value="1464188282000" />
         <entry key="$PROJECT_DIR$/../HelloSpring" value="1463407301000" />
         <entry key="$PROJECT_DIR$/../IronGram" value="1464271814000" />
-        <entry key="$PROJECT_DIR$" value="1466691843000" />
+        <entry key="$PROJECT_DIR$" value="1466698778000" />
         <entry key="$PROJECT_DIR$/../MicroblogSpring" value="1463527209000" />
         <entry key="$PROJECT_DIR$/../SpringCRUD" value="1463757554000" />
         <entry key="$PROJECT_DIR$/../SpringORM" value="1463750346000" />
@@ -602,9 +607,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/error.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/tweet.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/GetController.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/TweetService.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -658,6 +663,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="LFCRaleigh" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1146,12 +1155,12 @@
       <workItem from="1465912798163" duration="32548000" />
       <workItem from="1466082004177" duration="17185000" />
       <workItem from="1466256305401" duration="19931000" />
-      <workItem from="1466641299341" duration="8381000" />
+      <workItem from="1466641299341" duration="8646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87623000" />
+    <option name="totallyTimeSpent" value="87888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -1641,8 +1650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="135">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
