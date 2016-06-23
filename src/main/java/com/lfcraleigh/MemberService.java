@@ -35,13 +35,6 @@ public class MemberService {
         APIContext apiContext = new APIContext(accessToken);
         apiContext.setConfigurationMap(sdkConfig);
 
-        /*creditCard.setType("discover");
-        creditCard.setNumber("6011587807416524");
-        creditCard.setExpireMonth(11);
-        creditCard.setExpireYear(2016);
-        creditCard.setCvv2(572);
-        creditCard.setFirstName("First");
-        creditCard.setLastName("Last");*/
 
         FundingInstrument fundingInstrument = new FundingInstrument();
         fundingInstrument.setCreditCard(creditCard);

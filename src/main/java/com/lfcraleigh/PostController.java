@@ -28,19 +28,27 @@ public class PostController {
     @Autowired
     MemberService memberService;
 
+    @Autowired
+    TweetService tweetService;
+
 
     @RequestMapping(path = "/membership", method = RequestMethod.POST)
-    public String addMember(Member member, CreditCard creditCard, String mailingList) throws PayPalRESTException {
+    public String addMember(Member member, CreditCard creditCard, String mailingList) {
 
         Map<String, String> sdkConfig = new HashMap<String, String>();
         sdkConfig.put("mode", "live");
 
-        String accessToken = memberService.getAccessToken(sdkConfig);
-        Payment createdPayment = memberService.submitPayment(sdkConfig, accessToken, creditCard);
+        try {
+            String accessToken = memberService.getAccessToken(sdkConfig);
+            Payment createdPayment = memberService.submitPayment(sdkConfig, accessToken, creditCard);
 
-        memberService.saveMember(member, createdPayment);
+            memberService.saveMember(member, createdPayment);
 
-        return "redirect:/confirmation";
+            return "redirect:/confirmation";
+        } catch (PayPalRESTException e){
+            // add flash attribute
+            return "redirect:/membership";
+        }
     }
 
     @RequestMapping(path = "/admin-signup", method = RequestMethod.POST)
@@ -103,5 +111,15 @@ public class PostController {
         eventRepo.save(event);
 
         return "redirect:/manage-events";
+    }
+
+
+    @RequestMapping(path = "/tweet", method = RequestMethod.POST)
+    public String postTweet(String status) {
+
+        //tweetService.getAccess();
+        tweetService.postTweet(status);
+
+        return "redirect:/tweet";
     }
 }

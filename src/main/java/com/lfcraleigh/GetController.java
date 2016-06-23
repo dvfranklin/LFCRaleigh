@@ -1,16 +1,15 @@
 package com.lfcraleigh;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Controller
@@ -27,6 +26,7 @@ public class GetController {
 
     @Autowired
     AdminService adminService;
+
 
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
@@ -87,5 +87,6 @@ public class GetController {
     public String getAdminSignup(){
         return "admin-signup";
     }
+
 
 }
