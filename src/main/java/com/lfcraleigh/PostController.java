@@ -1,5 +1,10 @@
 package com.lfcraleigh;
 
+import com.ecwid.mailchimp.MailChimpClient;
+import com.ecwid.mailchimp.MailChimpException;
+import com.ecwid.mailchimp.MailChimpObject;
+import com.ecwid.mailchimp.method.v2_0.lists.Email;
+import com.ecwid.mailchimp.method.v2_0.lists.SubscribeMethod;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.PayPalRESTException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+
 
 @Controller
 public class PostController {
@@ -117,9 +124,43 @@ public class PostController {
     @RequestMapping(path = "/tweet", method = RequestMethod.POST)
     public String postTweet(String status) {
 
-        //tweetService.getAccess();
         tweetService.postTweet(status);
 
         return "redirect:/tweet";
+    }
+
+    public static class MergeVars extends MailChimpObject {
+
+        @Field
+        public String EMAIL, FNAME, LNAME;
+
+        public MergeVars() {
+        }
+
+        public MergeVars(String email, String fname, String lname) {
+            this.EMAIL = email;
+            this.FNAME = fname;
+            this.LNAME = lname;
+        }
+    }
+
+    @RequestMapping(path = "/subscribe", method = RequestMethod.POST)
+    public String addToMailingList(Member member) throws IOException, MailChimpException {
+
+        MailChimpClient mailChimpClient = new MailChimpClient();
+
+        SubscribeMethod subscribeMethod = new SubscribeMethod();
+        subscribeMethod.apikey = System.getenv().get("MAIL_API_KEY");
+        subscribeMethod.id = System.getenv().get("MAIL_LIST_ID");
+        subscribeMethod.email = new Email();
+        subscribeMethod.email.email = member.getEmail();
+        subscribeMethod.update_existing = true;
+        subscribeMethod.merge_vars = new MergeVars(member.getEmail(), member.getFirstName(), member.getLastName());
+        mailChimpClient.execute(subscribeMethod);
+
+
+        mailChimpClient.close();
+
+        return "redirect:/";
     }
 }

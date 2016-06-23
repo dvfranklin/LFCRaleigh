@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ecwid:ecwid-mailchimp:2.0.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ecwid/ecwid-mailchimp/2.0.1.0/ff8bba82be49d3959e755358ab46abf78458da3c/ecwid-mailchimp-2.0.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ecwid/ecwid-mailchimp/2.0.1.0/7618b1cfc471d969711a34aaa00d3f8f29385f63/ecwid-mailchimp-2.0.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

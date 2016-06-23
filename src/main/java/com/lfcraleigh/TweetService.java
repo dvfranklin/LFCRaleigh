@@ -7,8 +7,6 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
 
-import java.io.IOException;
-
 
 @Service
 public class TweetService {
