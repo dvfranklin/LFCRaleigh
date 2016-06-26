@@ -4,47 +4,63 @@
         LFC Raleigh - Official Liverpool Supporters Club
     </title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/template.css">
 </head>
 
 
 <body>
-<p align="center">
-    <img src="JFT96 header.jpeg" width="80%">
-</p>
-<div id="lfc-raleigh-menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
+
+<!-- jQuery and bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+<div class="container-fluid row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <p align="center">
+        <img src="JFT96 header.jpeg" width="100%">
+        </p>
+        <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/">Home</a>
+                        </li>
+                        <li><a href="/about">About Us</a>
+                        </li>
+                        <li><a href="/membership">Membership</a>
+                        </li>
+                        <li><a href="/calendar">Upcoming Events</a>
+                        </li>
+                        <li><a href="/admin-login">Admin Panel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="/">Home</a>
-                </li>
-                <li><a href="/about">About Us</a>
-                </li>
-                <li><a href="/membership">Membership</a>
-                </li>
-                <li><a href="/calendar">Upcoming Events</a>
-                </li>
-                <li><a href="/admin-login">Admin Panel</a>
-                </li>
-            </ul>
-        </div>
+    {{#badInfo}}
+        <p>Sorry, you have entered an incorrect name or password.</p>
+    {{/badInfo}}
+
+    <form action="/admin-login" method="post">
+        <label for="username">Enter username:</label>
+        <input type="text" name="username" placeholder="User name" required autofocus><br>
+
+        <label for="password">Enter password:</label>
+        <input type="password" name="password" placeholder="Password"><br>
+
+        <button type="submit" class="btn btn-primary">Log in!</button>
+    </form>
     </div>
+    <div class="col-md-1"></div>
 </div>
-{{#badInfo}}
-    <p>Sorry, you have entered an incorrect name or password.</p>
-{{/badInfo}}
-
-<form action="/admin-login" method="post">
-    <label for="username">Enter username:</label>
-    <input type="text" name="username" placeholder="User name"><br>
-
-    <label for="password">Enter password:</label>
-    <input type="password" name="password" placeholder="Password"><br>
-
-    <button type="submit">Log in!</button>
-</form>
+</body>
+</html>

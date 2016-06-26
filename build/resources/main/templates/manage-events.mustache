@@ -9,6 +9,7 @@
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/template.css" />
 
 </head>
 <body>
@@ -31,20 +32,37 @@
 </p>
 
 <form action="add-event" method="post">
-    <input type="text" name="description" placeholder="Describe Event">
     <input type="text" name="dateTime" placeholder="Enter Date and Time">
     <input type="text" name="location" placeholder="Enter Location">
-    <button type="submit">Add Event</button>
+    <input type="text" name="description" placeholder="Describe Event">
+    <button type="submit" class="btn btn-primary">Add Event</button>
 </form>
 
 {{#events}}
-    {{dateTime}} at {{location}} - {{description}}<br>
-    <form action="/edit-event" method="get">
-        <input type="hidden" name="id" value="{{id}}">
-        <button type="submit" class="btn btn-warning">Edit  <i class="fa fa-edit"></i></button>
-    </form>
-    <form action="/delete-event" method="get">
-        <input type="hidden" name="id" value="{{id}}">
-        <button type="submit" class="btn btn-danger">Delete  <i class="fa fa-trash"></i></button>
-    </form>
+    <table>
+        <tr>
+            <th>Date/Time</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr>
+            <td>{{dateTime}}</td>
+            <td>{{location}}</td>
+            <td>{{description}}</td>
+            <td>
+                <form action="/edit-event" method="get">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <button type="submit" class="btn btn-warning">Edit  <i class="fa fa-edit"></i></button>
+                </form>
+            </td>
+            <td>
+                <form action="/delete-event" method="get">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <button type="submit" class="btn btn-danger">Delete  <i class="fa fa-trash"></i></button>
+                </form>
+            </td>
+        </tr>
+    </table>
 {{/events}}

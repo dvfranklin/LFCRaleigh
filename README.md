@@ -47,10 +47,6 @@ Admins can add, edit, or remove events to be posted on the upcoming events page.
 #### Twitter
 Although not part of the minimum viable product, eventually the admin panel will allow administrators to post a tweet to the official LFC Raleigh account without having to log in or visit the Twitter site.
 
-## User Stories
-Generally, the two "epics" for this project are:
-- As an administrator of LFC Raleigh, I want to be able to take payments and add members online, so that I don't have to handle this work that could be automated.
-- As an administrator of LFC Raleigh, I want to be able to
 
 ## Minimum Viable Product
 For this project, the minimum viable product is a functioning website that interfaces with PostgreSQL to add news and events, with a membership page that accepts credit cards through Paypal and adds members to the database.
