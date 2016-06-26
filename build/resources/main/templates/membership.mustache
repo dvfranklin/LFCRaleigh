@@ -50,32 +50,62 @@
 
         <p>This is the part where we explain the benefits of membership</p>
 
+
+        <table>
         <form action="/membership" method="post">
+            <tr><td>
             <label for="firstName">First Name</label>
+                </td>
+                <td>
             <input type="text" name="firstName" placeholder="First Name"><br>
-
+                </td>
+            </tr>
+            <tr><td>
             <label for="lastName">Last Name</label>
+                </td>
+                <td>
             <input type="text" name="lastName" placeholder="Last Name"><br>
-
+                </td>
+            </tr>
+            <tr><td>
             <label for="email">Email Address</label>
+                </td>
+                <td>
             <input type="text" name="email" placeholder="Email Address"><br>
-
+                </td>
+            </tr>
+            <tr><td>
             <label for="officialId">Official LFC Membership ID</label>
+                </td>
+                <td>
             <input type="text" name="officialId" placeholder="Official LFC Membership ID"><br>
-
+                </td>
+            </tr>
+            <tr><td>
             <label for="type">Payment Type</label>
+                </td>
+                <td>
             <select name="type">
                 <option selected></option>
                 <option value="visa">Visa</option>
                 <option value="mastercard">Mastercard</option>
                 <option value="amex">American Express</option>
                 <option value="discover">Discover</option>
-            </select><br>
-
+            </select>
+                </td>
+            </tr>
+            <tr><td>
             <label for="number">Card Number</label>
+                </td>
+                <td>
             <input type="text" name="number" placeholder="Card Number"><br>
+                </td>
+            </tr>
 
+            <tr><td>
             <label for="expireMonth">Expiration Month</label>
+                </td>
+                <td>
             <select name="expireMonth">
                 <option selected></option>
                 <option value="1">1</option>
@@ -91,8 +121,13 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
+                </td>
+            </tr>
 
+            <tr><td>
             <label for="expireYear">Expiration Year</label>
+                </td>
+                <td>
             <select name="expireYear">
                 <option selected></option>
                 <option value="2016">2016</option>
@@ -102,19 +137,35 @@
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
                 <option value="2022">2022</option>
-            </select><br>
+            </select>
+                </td>
+            </tr>
 
+            <tr><td>
             <label for="cvv2">CVV Confirmation</label>
+                </td>
+                <td>
             <input type="text" name="cvv2" placeholder="CVV"><br>
+                </td>
+            </tr>
 
+            <tr><td>
             <label for="mailingList">Subscribe to Mailing List?</label>
+                </td>
+                <td>
             <input type="radio" name="mailingList" checked>Yes
             <input type="radio" name="mailingList">Maybe Later<br>
+                </td>
+            </tr>
 
+            <tr>
+                <td>
             <button type="submit" class="btn btn-primary"><i class="fa fa-soccer-ball-o"></i>  Join!</button>
+                </td>
+            </tr>
 
         </form>
-
+        </table>
         <img class="img-responsive" src="https://magrr.org/wp-content/uploads/2014/02/Powered-By-PayPal-Logo.png" width="150" height="75">
     </div>
     <div class="col-md-1"></div>
