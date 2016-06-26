@@ -1,105 +1,120 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>
-        LFC Raleigh - Join us
-    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LFC Raleigh - About Us</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.min.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 </head>
-
-
 <body>
-<p align="center">
-    <img src="JFT96 header.jpeg" width="80%">
-</p>
 
-<div id="lfc-raleigh-menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
+<!-- jQuery and bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<div class="container-fluid row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <p align="center">
+            <img src="JFT96 header.jpeg" width="100%">
+        </p>
+        <div id="lfc-raleigh-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/">Home</a>
+                        </li>
+                        <li><a href="/about">About Us</a>
+                        </li>
+                        <li><a href="/membership">Membership</a>
+                        </li>
+                        <li><a href="/calendar">Upcoming Events</a>
+                        </li>
+                        <li><a href="/admin-login">Admin Panel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="/">Home</a>
-                </li>
-                <li><a href="/about">About Us</a>
-                </li>
-                <li><a href="/membership">Membership</a>
-                </li>
-                <li><a href="/calendar">Upcoming Events</a>
-                </li>
-                <li><a href="/admin-login">Admin Panel</a>
-                </li>
-            </ul>
-        </div>
+
+    <p>This is the part where we explain the benefits of membership</p>
+
+    <form action="/membership" method="post">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" placeholder="First Name"><br>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" placeholder="Last Name"><br>
+
+        <label for="email">Email Address</label>
+        <input type="text" name="email" placeholder="Email Address"><br>
+
+        <label for="officialId">Official LFC Membership ID</label>
+        <input type="text" name="officialId" placeholder="Official LFC Membership ID"><br>
+
+        <label for="type">Payment Type</label>
+        <select name="type">
+            <option selected></option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">American Express</option>
+            <option value="discover">Discover</option>
+        </select><br>
+
+        <label for="number">Card Number</label>
+        <input type="text" name="number" placeholder="Card Number"><br>
+
+        <label for="expireMonth">Expiration Month</label>
+        <select name="expireMonth">
+            <option selected></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+        <label for="expireYear">Expiration Year</label>
+        <select name="expireYear">
+            <option selected></option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+        </select><br>
+
+        <label for="cvv2">CVV Confirmation</label>
+        <input type="text" name="cvv2" placeholder="CVV"><br>
+
+        <label for="mailingList">Subscribe to Mailing List?</label>
+        <input type="radio" name="mailingList" checked>Yes
+        <input type="radio" name="mailingList">Maybe Later<br>
+
+        <button type="submit" class="btn btn-primary"><i class="fa fa-soccer-ball-o"></i>  Join!</button>
+
+    </form>
     </div>
+    <div class="col-md-1"></div>
 </div>
 
-<p>This is the part where we explain the benefits of membership</p>
-
-<form action="/membership" method="post">
-    <label for="firstName">First Name</label>
-    <input type="text" name="firstName" placeholder="First Name"><br>
-
-    <label for="lastName">Last Name</label>
-    <input type="text" name="lastName" placeholder="Last Name"><br>
-
-    <label for="email">Email Address</label>
-    <input type="text" name="email" placeholder="Email Address"><br>
-
-    <label for="officialId">Official LFC Membership ID</label>
-    <input type="text" name="officialId" placeholder="Official LFC Membership ID"><br>
-
-    <label for="type">Payment Type</label>
-    <select name="type">
-        <option selected></option>
-        <option value="visa">Visa</option>
-        <option value="mastercard">Mastercard</option>
-        <option value="amex">American Express</option>
-        <option value="discover">Discover</option>
-    </select><br>
-
-    <label for="number">Card Number</label>
-    <input type="text" name="number" placeholder="Card Number"><br>
-
-    <label for="expireMonth">Expiration Month</label>
-    <select name="expireMonth">
-        <option selected></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
-
-    <label for="expireYear">Expiration Year</label>
-    <select name="expireYear">
-        <option selected></option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-    </select><br>
-
-    <label for="cvv2">CVV Confirmation</label>
-    <input type="text" name="cvv2" placeholder="CVV"><br>
-
-    <label for="mailingList">Join the Mailing List?</label>
-    <input type="radio" name="mailingList" checked>Yes
-    <input type="radio" name="mailingList">Maybe Later<br>
-
-    <button type="submit">Join!</button>
-
-</form>
+</body>
+</html>

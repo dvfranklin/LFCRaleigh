@@ -37,6 +37,13 @@
 </div>
 
 
+<form action="/subscribe" method="post">
+    <input type="text" name="firstName" placeholder="First name">
+    <input type="text" name="lastName" placeholder="Last name">
+    <input type="text" name="email" placeholder="Enter email address">
+    <button type="submit">Subscribe!</button>
+</form>
+
 {{#news}}
     <p><h3><b>{{title}}</b></h3> posted at {{dateTimeString}}</p>
 
