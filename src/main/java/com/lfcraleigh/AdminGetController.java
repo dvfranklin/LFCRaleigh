@@ -87,6 +87,8 @@ public class AdminGetController {
         NewsItem news = newsService.getSelectedNews(id);
 
         model.addAttribute("news", news);
+        model.addAttribute("now", LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES));
+
 
         return "edit-news";
     }

@@ -51,15 +51,16 @@
     <button type="submit" class="btn btn-primary">Add Event</button>
 </form>
 
-{{#events}}
+
     <table>
         <tr>
             <th>Date/Time</th>
             <th>Location</th>
             <th>Description</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th></th>
+            <th></th>
         </tr>
+        {{#events}}
         <tr>
             <td>{{dateTime}}</td>
             <td>{{location}}</td>
@@ -76,9 +77,10 @@
                     <button type="submit" class="btn btn-danger">Delete  <i class="fa fa-trash"></i></button>
                 </form>
             </td>
+        {{/events}}
         </tr>
     </table>
-{{/events}}
+
     </div>
     <div class="col-md-1"></div>
 </div>

@@ -16,23 +16,20 @@ import java.util.List;
 public class GetController {
 
     @Autowired
-    NewsRepository newsRepo;
-
-    @Autowired
-    EventRepository eventRepo;
-
-    @Autowired
-    AdminRepository adminRepo;
+    EventService eventService;
 
     @Autowired
     AdminService adminService;
+
+    @Autowired
+    NewsService newsService;
 
 
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String getHome(Model model){
 
-        List<NewsItem> news = newsRepo.findAllByOrderByIdDesc();
+        List<NewsItem> news = newsService.getAllNews();
 
         for(NewsItem n : news){
             n.dateTimeString = n.dateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT));
@@ -57,7 +54,7 @@ public class GetController {
     @RequestMapping(path = "/calendar", method = RequestMethod.GET)
     public String getEvents(Model model){
 
-        List<Event> events = eventRepo.findAllByOrderByIdDesc();
+        List<Event> events = eventService.getAllEvents();
 
         model.addAttribute("events", events);
 

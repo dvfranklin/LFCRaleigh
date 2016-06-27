@@ -24,19 +24,19 @@ import java.util.Map;
 public class PostController {
 
     @Autowired
-    NewsRepository newsRepo;
-
-    @Autowired
-    EventRepository eventRepo;
-
-    @Autowired
-    AdminRepository adminRepo;
-
-    @Autowired
     MemberService memberService;
 
     @Autowired
     TweetService tweetService;
+
+    @Autowired
+    NewsService newsService;
+
+    @Autowired
+    EventService eventService;
+
+    @Autowired
+    AdminService adminService;
 
 
     @RequestMapping(path = "/membership", method = RequestMethod.POST)
@@ -66,7 +66,7 @@ public class PostController {
 
         Administrator newAdmin = new Administrator(username, hashedPass);
 
-        adminRepo.save(newAdmin);
+        adminService.saveAdmin(newAdmin);
 
         return "redirect:/admin-login";
     }
@@ -74,7 +74,7 @@ public class PostController {
     @RequestMapping(path = "/admin-login", method = RequestMethod.POST)
     public String adminLogin(String username, String password, HttpSession session, Model model) throws PasswordStorage.InvalidHashException, PasswordStorage.CannotPerformOperationException {
 
-        Administrator admin = adminRepo.findAdministratorByUsername(username);
+        Administrator admin = adminService.getCurrentAdmin(username);
 
         if(admin != null) {
             if (PasswordStorage.verifyPassword(password, admin.getPassword())) {
@@ -94,7 +94,7 @@ public class PostController {
     public String addNews(String title, String body, String dateTime){
         NewsItem news = new NewsItem(title, body, LocalDateTime.parse(dateTime));
 
-        newsRepo.save(news);
+        newsService.saveNews(news);
 
         return "redirect:/manage-news";
     }
@@ -103,21 +103,33 @@ public class PostController {
     public String addEvent(String description, String dateTime, String location){
         Event event = new Event(description, dateTime, location);
 
-        eventRepo.save(event);
+        eventService.saveEvent(event);
 
         return "redirect:/manage-events";
     }
 
     @RequestMapping(path = "/edit-event", method = RequestMethod.POST)
     public String editEvent(int id, String dateTime, String location, String description){
-        Event event = eventRepo.findOne(id);
+        Event event = eventService.getSelectedEvent(id);
         event.setDateTime(dateTime);
         event.setLocation(location);
         event.setDescription(description);
 
-        eventRepo.save(event);
+        eventService.saveEvent(event);
 
         return "redirect:/manage-events";
+    }
+
+    @RequestMapping(path = "/edit-news", method = RequestMethod.POST)
+    public String editNews(int id, String title, String body, String dateTime){
+        NewsItem news = newsService.getSelectedNews(id);
+        news.setTitle(title);
+        news.setBody(body);
+        news.setDateTime(LocalDateTime.parse(dateTime));
+
+        newsService.saveNews(news);
+
+        return "redirect:/manage-news";
     }
 
 

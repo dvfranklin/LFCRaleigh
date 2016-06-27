@@ -23,4 +23,8 @@ public class EventService {
         eventRepo.delete(id);
     }
 
+    public void saveEvent(Event event){
+        eventRepo.save(event);
+    }
+
 }

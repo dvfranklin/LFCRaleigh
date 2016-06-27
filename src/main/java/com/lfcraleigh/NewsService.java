@@ -22,4 +22,8 @@ public class NewsService {
     public void deleteSelectedNews(int id){
         newsRepo.delete(id);
     }
+
+    public void saveNews(NewsItem news){
+        newsRepo.save(news);
+    }
 }

@@ -12,4 +12,8 @@ public class AdminService {
     public Administrator getCurrentAdmin(String username){
         return adminRepo.findAdministratorByUsername(username);
     }
+
+    public void saveAdmin(Administrator admin){
+        adminRepo.save(admin);
+    }
 }
