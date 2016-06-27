@@ -16,6 +16,7 @@ public class Member {
     String email;
     boolean currentDues = false;
     boolean joinMailingList;
+    boolean receivedSwag = false;
 
 
     public Member() {
