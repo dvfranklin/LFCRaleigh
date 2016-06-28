@@ -7,56 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6046cd-8927-48c4-8cfb-15b411334fa3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/jquery.datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.datetimepicker.full.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-member.mustache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/bootstrap.min.css.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/calendar.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/calendar.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/home.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/home.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/manage-events.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/manage-events.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/manage-news.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/manage-news.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/member-lookup.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/member-lookup.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/membership.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/membership.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/tweet.mustache" afterPath="$PROJECT_DIR$/build/resources/main/templates/tweet.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/template.css" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/static/css/template.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/about.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/about.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/admin-landing.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/admin-landing.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/admin-login.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/admin-login.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/calendar.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/calendar.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/edit-event.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/edit-event.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/edit-news.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/edit-news.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/home.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/home.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/manage-events.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/manage-events.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/manage-news.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/manage-news.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/member-lookup.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/member-lookup.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/membership.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/membership.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/tweet.mustache" afterPath="$PROJECT_DIR$/out/production/LFCRaleigh/templates/tweet.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/AdminGetController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/AdminGetController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/Event.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/EventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/GetController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/GetController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/MemberService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/MemberService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/NewsItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/NewsItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/template.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/template.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/calendar.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/calendar.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/home.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/membership.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/membership.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/tweet.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/tweet.mustache" />
     </list>
     <ignored path="LFCRaleigh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -215,8 +167,18 @@
       <file leaf-file-name="manage-events.mustache" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="73">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage-news.mustache" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -232,11 +194,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="member-lookup.mustache" pinned="false" current-in-tab="true">
+      <file leaf-file-name="member-lookup.mustache" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -245,8 +207,8 @@
       <file leaf-file-name="PostController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -255,7 +217,7 @@
       <file leaf-file-name="home.mustache" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="120">
               <caret line="25" column="93" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
               <folding />
             </state>
@@ -297,16 +259,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -760,7 +712,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/EventService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/tweet.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add-member.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/membership.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/Event.java" />
@@ -768,10 +719,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/GetController.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/calendar.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/template.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache" />
       </list>
     </option>
   </component>
@@ -1470,12 +1422,12 @@
       <workItem from="1466082004177" duration="17185000" />
       <workItem from="1466256305401" duration="19931000" />
       <workItem from="1466641299341" duration="47625000" />
-      <workItem from="1467090958485" duration="9484000" />
+      <workItem from="1467090958485" duration="9900000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136351000" />
+    <option name="totallyTimeSpent" value="136767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -1812,14 +1764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/membership.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1945,34 +1889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/template.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="25" column="93" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -1987,8 +1907,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="150">
+          <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="25" column="93" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage-events.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage-news.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
