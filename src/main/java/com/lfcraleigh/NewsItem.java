@@ -13,7 +13,7 @@ public class NewsItem {
     @Column(nullable = false)
     String title;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     String body;
 
     @Column(nullable = false)
