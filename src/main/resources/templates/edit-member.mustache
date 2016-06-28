@@ -47,17 +47,17 @@
             </div>
         </div>
 
-
+        {{#member}}
         <form action="/edit-member" method="post">
-            <input type="text" name="firstName" placeholder="First name"/>
-            <input type="text" name="lastName" placeholder="Last name"/>
-            <input type="text" name="email" placeholder="Email address"/>
-            <input type="checkbox" name="currentDues"><label for="currentDues">Paid current year's dues?</label>
-            <input type="checkbox" name="joinMailingList"><label for="joinMailingList">Join mailing list?</label>
-            <input type="checkbox" name="receivedSwag"><label for="receivedSwag">Received this year's swag?</label>
+            <input type="text" name="firstName" value="{{firstName}}"/>
+            <input type="text" name="lastName" value="{{lastName}}"/>
+            <input type="text" name="email" value="{{email}}"/>
+            <input type="checkbox" name="currentDues" value="{{currentDues}}"><label for="currentDues">Paid current year's dues?</label>
+            <input type="checkbox" name="joinMailingList" value="{{joinMailingList}}"><label for="joinMailingList">Join mailing list?</label>
+            <input type="checkbox" name="receivedSwag" value="{{receivedSwag}}"><label for="receivedSwag">Received this year's swag?</label>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
-
+        {{/member}}
     </div>
     <div class="col-md-1"></div>
 

@@ -30,6 +30,10 @@ public class MemberService {
         return memberRepo.findAllByOrderByIdAsc();
     }
 
+    public Member getMemberById(int id){
+        return memberRepo.findOne(id);
+    }
+
     public String getAccessToken(Map<String, String> sdkConfig) throws PayPalRESTException {
 
         String accessToken = new OAuthTokenCredential(System.getenv().get("CLIENT_ID"), System.getenv().get("SECRET"), sdkConfig).getAccessToken();

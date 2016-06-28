@@ -163,11 +163,13 @@ public class AdminGetController {
     }
 
     @RequestMapping(path = "/edit-member", method=RequestMethod.GET)
-    public String getEditMemberPage(Model model, HttpSession session){
+    public String getEditMemberPage(int id, Model model, HttpSession session){
         Administrator admin = adminService.getCurrentAdmin((String)session.getAttribute("username"));
 
         if(admin != null){
             model.addAttribute("admin", admin);
+            Member member = memberService.getMemberById(id);
+            model.addAttribute("member", member);
             return "edit-member";
         }
 
