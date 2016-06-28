@@ -149,4 +149,28 @@ public class AdminGetController {
         return "redirect:/admin-login";
     }
 
+    @RequestMapping(path = "/add-member", method = RequestMethod.GET)
+    public String getAddMemberPage(Model model, HttpSession session){
+        Administrator admin = adminService.getCurrentAdmin((String)session.getAttribute("username"));
+
+        if(admin != null) {
+            model.addAttribute("admin", admin);
+            return "add-member";
+        }
+
+        return "redirect:/admin-login";
+
+    }
+
+    @RequestMapping(path = "/edit-member", method=RequestMethod.GET)
+    public String getEditMemberPage(Model model, HttpSession session){
+        Administrator admin = adminService.getCurrentAdmin((String)session.getAttribute("username"));
+
+        if(admin != null){
+            model.addAttribute("admin", admin);
+            return "edit-member";
+        }
+
+        return "redirect:/admin-login";
+    }
 }

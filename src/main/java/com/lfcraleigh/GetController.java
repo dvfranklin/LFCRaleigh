@@ -56,7 +56,8 @@ public class GetController {
 
         List<Event> events = eventService.getAllEvents();
 
-        model.addAttribute("events", events);
+        String jsonEvents = eventService.getEventsInJson();
+        model.addAttribute("jsonEvents", jsonEvents);
 
         return "calendar";
     }

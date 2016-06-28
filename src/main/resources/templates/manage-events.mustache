@@ -10,6 +10,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <script src="js/bootstrap.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/jquery.datetimepicker.css">
         <link rel="stylesheet" href="css/template.css">
     </head>
 
@@ -19,6 +20,7 @@
 <!-- jQuery and bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
 
 
 
@@ -48,26 +50,26 @@
     </div>
 
     <form action="add-event" method="post">
-    <input type="text" name="dateTime" placeholder="Enter Date and Time">
-    <input type="text" name="location" placeholder="Enter Location">
-    <input type="text" name="description" placeholder="Describe Event">
+    <input type="text" name="title" placeholder="Event Title">
+        <script>
+            jQuery(function(){jQuery('#datetimepicker').datetimepicker();
+            });</script>
+        <input id="datetimepicker" type="text" placeholder="Date and Time" name="start">
     <button type="submit" class="btn btn-primary">Add Event</button>
 </form>
 
 
     <table>
         <tr>
-            <th>Date/Time</th>
-            <th>Location</th>
-            <th>Description</th>
+            <th>Event</th>
+            <th>Date & Time</th>
             <th></th>
             <th></th>
         </tr>
         {{#events}}
         <tr>
-            <td>{{dateTime}}</td>
-            <td>{{location}}</td>
-            <td>{{description}}</td>
+            <td>{{title}}</td>
+            <td>{{start}}</td>
             <td>
                 <form action="/edit-event" method="get">
                     <input type="hidden" name="id" value="{{id}}">

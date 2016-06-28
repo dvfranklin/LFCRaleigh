@@ -1,59 +1,81 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>
-        LFC Raleigh - Official Liverpool Supporters Club
-    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LFC Raleigh - About Us</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/template.css">
+
 </head>
-
 <body>
-<p align="center">
-<img class="img-responsive" src="JFT96 header.jpeg" width="80%">
-</p>
 
-<div id="lfc-raleigh-menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-menubuilder" align="center">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="/">Home</a>
-                </li>
-                <li><a href="/about">About Us</a>
-                </li>
-                <li><a href="/membership">Membership</a>
-                </li>
-                <li><a href="/calendar">Upcoming Events</a>
-                </li>
-                <li><a href="/admin-login">Admin Panel</a>
-                </li>
-            </ul>
+<!-- jQuery and bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<div class="container-fluid row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <p align="center">
+            <img src="JFT96 header.jpeg" class="img-fluid" alt="Responsive image" width="100%">
+        </p>
+        <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand" href="#">LFC Raleigh</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/">Home</a>
+                        </li>
+                        <li><a href="/about">About Us</a>
+                        </li>
+                        <li><a href="/membership">Membership</a>
+                        </li>
+                        <li><a href="/calendar">Upcoming Events</a>
+                        </li>
+                        <li><a href="/admin-login">Admin Panel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="col-md-1"></div>
 </div>
 
-
-<form action="/subscribe" method="post">
-    <input type="text" name="firstName" placeholder="First name">
-    <input type="text" name="lastName" placeholder="Last name">
-    <input type="text" name="email" placeholder="Enter email address">
-    <button type="submit">Subscribe!</button>
-</form>
-
+<div class="container-fluid">
+<div class="col-md-1"></div>
+<div class="col-md-7">
 {{#news}}
     <p><h3><b>{{title}}</b></h3> posted at {{dateTimeString}}</p>
 
-    <p>{{body}}</p>
-
-
+    <p>{{body}}</p><br><br>
 {{/news}}
+    <br><br><br>
 
-<a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/LFCRaleigh">Tweets by LFCRaleigh</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <h4>Subscribe to our mailing list to keep up with the latest news!</h4>
+    <form action="/subscribe" method="post">
+        <input type="text" name="firstName" placeholder="First name">
+        <input type="text" name="lastName" placeholder="Last name">
+        <input type="text" name="email" placeholder="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe!  <i class="fa fa-envelope"></i></button>
+    </form>
+</div>
+<div class="col-md-3">
+<a class="twitter-timeline" data-width="300" data-height="500" href="https://twitter.com/LFCRaleigh">Tweets by LFCRaleigh</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
+    <div class="col-md-1"></div>
+
+</div>
 
 </body>
 </html>

@@ -54,7 +54,7 @@
     <button type="submit">Post it!</button>
 </form>
 
-{{#news}}
+
     <table>
         <tr>
             <th>Title</th>
@@ -63,24 +63,25 @@
             <th></th>
             <th></th>
         </tr>
-    <tr>
-        <td>{{title}}</td>
-        <td>{{body}}</td>
-        <td>{{dateTime}}</td>
-    <td>
-    <form action="edit-news" method="get">
-        <input type="hidden" name="id" value="{{id}}">
-        <button type="submit" class="btn btn-warning">Edit  <i class="fa fa-edit"></i></button>
-    </form>
-    </td>
-    <td>
-    <form action="delete-news" method="get">
-        <input type="hidden" name="id" value="{{id}}">
-        <button type="submit" class="btn btn-danger">Delete  <i class="fa fa-trash"></i></button>
-    </form>
-    </td>
-    </tr>
-{{/news}}
+        {{#news}}
+        <tr>
+            <td>{{title}}</td>
+            <td>{{body}}</td>
+            <td>{{dateTime}}</td>
+        <td>
+        <form action="edit-news" method="get">
+            <input type="hidden" name="id" value="{{id}}">
+            <button type="submit" class="btn btn-warning">Edit  <i class="fa fa-edit"></i></button>
+        </form>
+        </td>
+        <td>
+        <form action="delete-news" method="get">
+            <input type="hidden" name="id" value="{{id}}">
+            <button type="submit" class="btn btn-danger">Delete  <i class="fa fa-trash"></i></button>
+        </form>
+        </td>
+        </tr>
+        {{/news}}
     </table>
     </div>
     <div class="col-md-1"></div>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,7 +26,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <p align="center">
-        <img src="JFT96 header.jpeg" width="100%">
+            <img src="JFT96 header.jpeg" width="100%">
         </p>
         <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
             <div class="container-fluid">
@@ -35,35 +36,31 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-menubuilder">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="/">Home</a>
-                        </li>
-                        <li><a href="/about">About Us</a>
-                        </li>
-                        <li><a href="/membership">Membership</a>
-                        </li>
-                        <li><a href="/calendar">Upcoming Events</a>
-                        </li>
-                        <li><a href="/admin-login">Admin Panel</a>
-                        </li>
+                        <li><a href="/">Back to the Home Page</a></li>
+                        <li><a href="/member-lookup">Member Query</a></li>
+                        <li><a href="/manage-news">Manage News</a></li>
+                        <li><a href="/manage-events">Manage Events</a></li>
+                        <li></l><a href="/tweet">Get Yo Tweet On</a></li>
+                        <li><a href="/logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    {{#badInfo}}
-        <p>Sorry, you have entered an incorrect name or password.</p>
-    {{/badInfo}}
 
-    <form action="/admin-login" method="post">
-        <label for="username">Enter username:</label>
-        <input type="text" name="username" placeholder="User name" required autofocus><br>
 
-        <label for="password">Enter password:</label>
-        <input type="password" name="password" placeholder="Password"><br>
+        <form action="/edit-member" method="post">
+            <input type="text" name="firstName" placeholder="First name"/>
+            <input type="text" name="lastName" placeholder="Last name"/>
+            <input type="text" name="email" placeholder="Email address"/>
+            <input type="checkbox" name="currentDues"><label for="currentDues">Paid current year's dues?</label>
+            <input type="checkbox" name="joinMailingList"><label for="joinMailingList">Join mailing list?</label>
+            <input type="checkbox" name="receivedSwag"><label for="receivedSwag">Received this year's swag?</label>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
 
-        <button type="submit" class="btn btn-primary">Log in!</button>
-    </form>
     </div>
     <div class="col-md-1"></div>
+
 </div>
 </body>
 </html>

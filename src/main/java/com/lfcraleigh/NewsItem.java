@@ -13,7 +13,6 @@ public class NewsItem {
     @Column(nullable = false)
     String title;
 
-    @Lob
     @Column(nullable = false)
     String body;
 

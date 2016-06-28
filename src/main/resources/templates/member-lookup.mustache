@@ -46,29 +46,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-1"></div>
-</div>
-
-<div class="container-fluid row">
-    <div class="col-md-4"></div>
-    <div class="col-md-2" style="justify-content: center; align-items: center;">
+        <div align="center">
         <form action="/add-member" method="get">
             <button class="btn btn-primary">Add Member  <i class="fa fa-plus"></i></button>
         </form>
-    </div>
-    <div class="col-md-2">
-        <form action="/edit-member" method="get">
-            <button class="btn btn-warning">Edit Member <i class="fa fa-edit"></i></button>
-        </form>
-    </div>
-    <div class="col-md-4"></div>
-</div>
+        </div>
 
-<div class="container-fluid row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <table>
+        <table class="table">
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -76,6 +60,7 @@
             <th>Current on Dues?</th>
             <th>Mailing List?</th>
             <th>Received swag?</th>
+            <th></th>
         </tr>
         <tr>
             {{#members}}
@@ -85,6 +70,10 @@
                 <td>{{currentDues}}</td>
                 <td>{{joinMailingList}}</td>
                 <td>{{receivedSwag}}</td>
+                <td><form action="/edit-member" method="get">
+                    <button class="btn btn-warning">Edit  <i class="fa fa-edit"></i></button>
+                    <input type="hidden" name="id" value="{{id}}">
+                </form></td>
             {{/members}}
         </tr>
         </table>

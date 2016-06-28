@@ -13,44 +13,51 @@ public class Event {
     int id;
 
     @Column(nullable = false)
-    String description;
+    String title;
 
     @Column(nullable = false)
-    String dateTime;
+    String start;
 
-    @Column(nullable = false)
-    String location;
+    boolean allDay = false;
 
     public Event() {
     }
 
-    public Event(String description, String dateTime, String location) {
-        this.description = description;
-        this.dateTime = dateTime;
-        this.location = location;
+    public Event(String title, String start) {
+        this.title = title;
+        this.start = start;
     }
 
-    public String getDescription() {
-        return description;
+    public int getId() {
+        return id;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getDateTime() {
-        return dateTime;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getLocation() {
-        return location;
+    public String getStart() {
+        return start;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setStart(String start) {
+        this.start = start;
+    }
+
+    public boolean isAllDay() {
+        return allDay;
+    }
+
+    public void setAllDay(boolean allDay) {
+        this.allDay = allDay;
     }
 }
+

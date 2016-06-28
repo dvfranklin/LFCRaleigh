@@ -49,13 +49,19 @@ public class PostController {
             String accessToken = memberService.getAccessToken(sdkConfig);
             Payment createdPayment = memberService.submitPayment(sdkConfig, accessToken, creditCard);
 
-            memberService.saveMember(member, createdPayment);
+            memberService.saveMemberPaypal(member, createdPayment);
 
             return "redirect:/confirmation";
         } catch (PayPalRESTException e){
             // add flash attribute
             return "redirect:/membership";
         }
+    }
+
+    @RequestMapping(path = "/add-member", method = RequestMethod.POST)
+    public String addMemberManually(Member member){
+        memberService.saveMember(member);
+        return "redirect:/member-lookup";
     }
 
     @RequestMapping(path = "/admin-signup", method = RequestMethod.POST)
@@ -100,8 +106,8 @@ public class PostController {
     }
 
     @RequestMapping(path = "/add-event", method = RequestMethod.POST)
-    public String addEvent(String description, String dateTime, String location){
-        Event event = new Event(description, dateTime, location);
+    public String addEvent(String title, String start){
+        Event event = new Event(title, start);
 
         eventService.saveEvent(event);
 
@@ -109,11 +115,10 @@ public class PostController {
     }
 
     @RequestMapping(path = "/edit-event", method = RequestMethod.POST)
-    public String editEvent(int id, String dateTime, String location, String description){
+    public String editEvent(int id, String title, String start){
         Event event = eventService.getSelectedEvent(id);
-        event.setDateTime(dateTime);
-        event.setLocation(location);
-        event.setDescription(description);
+        event.setTitle(title);
+        event.setStart(start);
 
         eventService.saveEvent(event);
 
@@ -141,37 +146,12 @@ public class PostController {
         return "redirect:/tweet";
     }
 
-    public static class MergeVars extends MailChimpObject {
 
-        @Field
-        public String EMAIL, FNAME, LNAME;
-
-        public MergeVars() {
-        }
-
-        public MergeVars(String email, String fname, String lname) {
-            this.EMAIL = email;
-            this.FNAME = fname;
-            this.LNAME = lname;
-        }
-    }
 
     @RequestMapping(path = "/subscribe", method = RequestMethod.POST)
     public String addToMailingList(Member member) throws IOException, MailChimpException {
 
-        MailChimpClient mailChimpClient = new MailChimpClient();
-
-        SubscribeMethod subscribeMethod = new SubscribeMethod();
-        subscribeMethod.apikey = System.getenv().get("MAIL_API_KEY");
-        subscribeMethod.id = System.getenv().get("MAIL_LIST_ID");
-        subscribeMethod.email = new Email();
-        subscribeMethod.email.email = member.getEmail();
-        subscribeMethod.update_existing = true;
-        subscribeMethod.merge_vars = new MergeVars(member.getEmail(), member.getFirstName(), member.getLastName());
-        mailChimpClient.execute(subscribeMethod);
-
-
-        mailChimpClient.close();
+        memberService.subscribeMailingList(member);
 
         return "redirect:/";
     }

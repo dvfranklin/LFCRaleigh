@@ -27,17 +27,7 @@
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-        events: [
-            {
-                title  : 'LFC-Barcelona Friendly',
-                start  : '2016-08-06T12:00:00',
-                allDay : false
-            },
-            {
-                title  : '2005 CL Rewatch',
-                start  : '2016-07-04T15:00:00',
-                allDay : false
-            }],
+        events: {{{jsonEvents}}},
         header:
         {
             left:   'prev',
@@ -78,12 +68,6 @@
                 </div>
             </div>
         </div>
-
-        {{#events}}
-        <p>
-             {{dateTime}} at {{location}} - {{description}}
-        </p>
-        {{/events}}
 
 
     <div id='calendar'></div>

@@ -1,5 +1,10 @@
 package com.lfcraleigh;
 
+import com.ecwid.mailchimp.MailChimpClient;
+import com.ecwid.mailchimp.MailChimpException;
+import com.ecwid.mailchimp.MailChimpObject;
+import com.ecwid.mailchimp.method.v2_0.lists.Email;
+import com.ecwid.mailchimp.method.v2_0.lists.SubscribeMethod;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.OAuthTokenCredential;
@@ -7,6 +12,7 @@ import com.paypal.base.rest.PayPalRESTException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -66,11 +72,46 @@ public class MemberService {
 
     }
 
-    public void saveMember(Member member, Payment createdPayment){
+    public void saveMemberPaypal(Member member, Payment createdPayment){
         if(createdPayment.getState().equals("approved")){
             member.setCurrentDues(true);
             memberRepo.save(member);
         }
+    }
+
+    public void saveMember(Member member){
+        memberRepo.save(member);
+    }
+
+    public class MergeVars extends MailChimpObject {
+
+        @Field
+        public String EMAIL, FNAME, LNAME;
+
+        public MergeVars() {
+        }
+
+        public MergeVars(String email, String fname, String lname) {
+            this.EMAIL = email;
+            this.FNAME = fname;
+            this.LNAME = lname;
+        }
+    }
+
+    public void subscribeMailingList(Member member) throws IOException, MailChimpException {
+        MailChimpClient mailChimpClient = new MailChimpClient();
+
+        SubscribeMethod subscribeMethod = new SubscribeMethod();
+        subscribeMethod.apikey = System.getenv().get("MAIL_API_KEY");
+        subscribeMethod.id = System.getenv().get("MAIL_LIST_ID");
+        subscribeMethod.email = new Email();
+        subscribeMethod.email.email = member.getEmail();
+        subscribeMethod.update_existing = true;
+        subscribeMethod.merge_vars = new MergeVars(member.getEmail(), member.getFirstName(), member.getLastName());
+        mailChimpClient.execute(subscribeMethod);
+
+
+        mailChimpClient.close();
     }
 
 }
