@@ -91,20 +91,7 @@ public class MemberService {
         memberRepo.save(member);
     }
 
-    public class MergeVars extends MailChimpObject {
 
-        @Field
-        public String EMAIL, FNAME, LNAME;
-
-        public MergeVars() {
-        }
-
-        public MergeVars(String email, String fname, String lname) {
-            this.EMAIL = email;
-            this.FNAME = fname;
-            this.LNAME = lname;
-        }
-    }
 
     public void subscribeMailingList(Member member) throws IOException, MailChimpException {
         MailChimpClient mailChimpClient = new MailChimpClient();

@@ -147,7 +147,6 @@ public class PostController {
     }
 
 
-
     @RequestMapping(path = "/subscribe", method = RequestMethod.POST)
     public String addToMailingList(Member member) throws IOException, MailChimpException {
 
