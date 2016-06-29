@@ -40,7 +40,7 @@ public class PostController {
 
 
     @RequestMapping(path = "/membership", method = RequestMethod.POST)
-    public String addMember(Member member, CreditCard creditCard, String mailingList) {
+    public String addMember(Member member, CreditCard creditCard, String mailingList) throws IOException, MailChimpException {
 
         Map<String, String> sdkConfig = new HashMap<String, String>();
         sdkConfig.put("mode", "live");

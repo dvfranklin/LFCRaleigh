@@ -76,10 +76,14 @@ public class MemberService {
 
     }
 
-    public void saveMemberPaypal(Member member, Payment createdPayment){
+    public void saveMemberPaypal(Member member, Payment createdPayment) throws IOException, MailChimpException {
         if(createdPayment.getState().equals("approved")){
             member.setCurrentDues(true);
             memberRepo.save(member);
+        }
+
+        if(member.joinMailingList ==true){
+            subscribeMailingList(member);
         }
     }
 
