@@ -97,16 +97,19 @@ public class MemberService {
         MailChimpClient mailChimpClient = new MailChimpClient();
 
         SubscribeMethod subscribeMethod = new SubscribeMethod();
-        subscribeMethod.apikey = System.getenv().get("MAIL_API_KEY");
-        subscribeMethod.id = System.getenv().get("MAIL_LIST_ID");
+        subscribeMethod.apikey = "3c0e2caab8c8e60c2a74a8bc3de00f70-us11";
+        subscribeMethod.id = "e71879d213";
         subscribeMethod.email = new Email();
         subscribeMethod.email.email = member.getEmail();
         subscribeMethod.update_existing = true;
         subscribeMethod.merge_vars = new MergeVars(member.getEmail(), member.getFirstName(), member.getLastName());
+        subscribeMethod.send_welcome = true;
         mailChimpClient.execute(subscribeMethod);
 
 
         mailChimpClient.close();
+
+        member.joinMailingList = true;
     }
 
 }

@@ -60,8 +60,9 @@
             <th>Received swag?</th>
             <th></th>
         </tr>
+        {{#members}}
         <tr>
-            {{#members}}
+
                 <td>{{firstName}}</td>
                 <td>{{lastName}}</td>
                 <td>{{email}}</td>
@@ -72,8 +73,8 @@
                     <button class="btn btn-warning">Edit  <i class="fa fa-edit"></i></button>
                     <input type="hidden" name="id" value="{{id}}">
                 </form></td>
-            {{/members}}
         </tr>
+        {{/members}}
         </table>
     </div>
     <div class="col-md-1"></div>
