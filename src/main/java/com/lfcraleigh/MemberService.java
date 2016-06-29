@@ -97,8 +97,8 @@ public class MemberService {
         MailChimpClient mailChimpClient = new MailChimpClient();
 
         SubscribeMethod subscribeMethod = new SubscribeMethod();
-        subscribeMethod.apikey = "3c0e2caab8c8e60c2a74a8bc3de00f70-us11";
-        subscribeMethod.id = "e71879d213";
+        subscribeMethod.apikey = System.getenv().get("MAIL_API_KEY");
+        subscribeMethod.id = "MAIL_LIST_ID";
         subscribeMethod.email = new Email();
         subscribeMethod.email.email = member.getEmail();
         subscribeMethod.update_existing = true;
