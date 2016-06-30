@@ -137,6 +137,21 @@ public class PostController {
         return "redirect:/manage-news";
     }
 
+    @RequestMapping(path = "/edit-member", method = RequestMethod.POST)
+    public String editMember(int id, String firstName, String lastName, String email, boolean currentDues, boolean joinMailingList, boolean receivedSwag){
+        Member member = memberService.getMemberById(id);
+        member.setFirstName(firstName);
+        member.setLastName(lastName);
+        member.setEmail(email);
+        member.setCurrentDues(currentDues);
+        member.setJoinMailingList(joinMailingList);
+        member.setReceivedSwag(receivedSwag);
+
+        memberService.saveMember(member);
+
+        return "redirect:/member-lookup";
+    }
+
 
     @RequestMapping(path = "/tweet", method = RequestMethod.POST)
     public String postTweet(String status) {

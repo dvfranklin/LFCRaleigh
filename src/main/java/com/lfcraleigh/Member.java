@@ -53,4 +53,20 @@ public class Member {
     public void setCurrentDues(boolean currentDues) {
         this.currentDues = currentDues;
     }
+
+    public boolean isJoinMailingList() {
+        return joinMailingList;
+    }
+
+    public void setJoinMailingList(boolean joinMailingList) {
+        this.joinMailingList = joinMailingList;
+    }
+
+    public boolean isReceivedSwag() {
+        return receivedSwag;
+    }
+
+    public void setReceivedSwag(boolean receivedSwag) {
+        this.receivedSwag = receivedSwag;
+    }
 }
