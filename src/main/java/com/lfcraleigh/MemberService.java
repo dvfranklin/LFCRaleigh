@@ -98,7 +98,7 @@ public class MemberService {
 
         SubscribeMethod subscribeMethod = new SubscribeMethod();
         subscribeMethod.apikey = System.getenv().get("MAIL_API_KEY");
-        subscribeMethod.id = "MAIL_LIST_ID";
+        subscribeMethod.id = System.getenv().get("MAIL_LIST_ID");
         subscribeMethod.email = new Email();
         subscribeMethod.email.email = member.getEmail();
         subscribeMethod.update_existing = true;
