@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6046cd-8927-48c4-8cfb-15b411334fa3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache" />
     </list>
     <ignored path="LFCRaleigh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -173,6 +173,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="edit-member.mustache" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="54" column="144" selection-start-line="54" selection-start-column="144" selection-end-line="54" selection-end-column="144" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lfcraleigh/Member.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -211,11 +221,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="member-lookup.mustache" pinned="false" current-in-tab="true">
+      <file leaf-file-name="member-lookup.mustache" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="571">
+              <caret line="74" column="66" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -702,8 +712,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/MemberService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/Member.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lfcraleigh/PostController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache" />
       </list>
     </option>
   </component>
@@ -1373,12 +1383,12 @@
       <workItem from="1466256305401" duration="19931000" />
       <workItem from="1466641299341" duration="47625000" />
       <workItem from="1467090958485" duration="27647000" />
-      <workItem from="1467239580402" duration="1074000" />
+      <workItem from="1467239580402" duration="1164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155588000" />
+    <option name="totallyTimeSpent" value="155678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1813,14 +1823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lfcraleigh/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -1839,8 +1841,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/member-lookup.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="571">
+          <caret line="74" column="66" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/edit-member.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="54" column="144" selection-start-line="54" selection-start-column="144" selection-end-line="54" selection-end-column="144" />
           <folding />
         </state>
       </provider>
